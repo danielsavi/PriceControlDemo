@@ -85,6 +85,7 @@ namespace CoreLibrary
              *      Routing and filtering
              *      Duplicate detection
              *      At least once delivery
+             *      https://www.serverless360.com/blog/azure-service-bus-topics-vs-event-grid
             */
             if (Threshold == 0) // Threshold == 0 equals to undefined value, i.e. ignore the Threshold and process
             {
