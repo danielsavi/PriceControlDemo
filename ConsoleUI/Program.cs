@@ -14,7 +14,7 @@ namespace ConsoleUI
                 var arbitraryStock = new Publisher("RY", 14.30);
 
                 //Create Instances of Subscribers
-                var sub1 = new Subscriber("User1", Subscriber.TriggerType.Both); //should return 10 items
+                var sub1 = new Subscriber("User1", Subscriber.TriggerType.Any); //should return 10 items
                 var sub2 = new Subscriber("User2", Subscriber.TriggerType.Sell); //should return 5 items (sell)
                 var sub3 = new Subscriber("User3", Subscriber.TriggerType.Buy); //should return 5 items (buy)
                 var sub4 = new Subscriber("User4", Subscriber.TriggerType.Sell, 0.3); //should return 2 items (sell)

@@ -6,7 +6,7 @@ namespace CoreLibrary
     {
         public enum TriggerType
         {
-            Both = 0,
+            Any = 0,
             Sell = 1,
             Buy = -1,
         }
@@ -34,7 +34,7 @@ namespace CoreLibrary
             //
             switch (Trigger)
             {
-                case TriggerType.Both:
+                case TriggerType.Any:
                     p.OnBuyPublish += OnNotificationReceived;  // multicast delegate
                     p.OnSellPublish += OnNotificationReceived;  // multicast delegate
                     break;
@@ -55,7 +55,7 @@ namespace CoreLibrary
             // unregister OnNotificationReceived from publisher
             switch (Trigger)
             {
-                case TriggerType.Both:
+                case TriggerType.Any:
                     p.OnBuyPublish -= OnNotificationReceived;  // multicast delegate
                     p.OnSellPublish -= OnNotificationReceived;  // multicast delegate
                     break;
