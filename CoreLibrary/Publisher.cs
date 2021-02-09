@@ -40,12 +40,10 @@ namespace CoreLibrary
 
         public void UpdateValue(double newValue)
         {
-            if (newValue <= 0) throw new ArgumentException("Should not be equal or less than 0", "value");
+            if (newValue <= 0) throw new ArgumentException("Should not be equal or less than zero", "value");
 
             //TODO: We can extract those lines to a specific Call and write some additional unit tests
             ThresholdValue = ((newValue - Value) / Math.Abs(Value)) * 100;
-            //ThresholdABSValue = Math.Abs(ThresholdValue);
-            //Math.Round(inputValue, 2, MidpointRounding.AwayFromZero)
             ThresholdABSValue = Math.Abs(Math.Round(ThresholdValue, 2, MidpointRounding.AwayFromZero));
             Value = newValue;
 

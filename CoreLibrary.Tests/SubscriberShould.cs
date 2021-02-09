@@ -6,7 +6,7 @@ namespace CoreLibrary.Tests
     public class SubscriberShould
     {
         [Fact]
-        public void Subscriber_Empty_subscriberName_ShouldReturn_ArgumentException()
+        public void Subscriber_Constructor_Empty_subscriberName_ShouldReturn_ArgumentException()
         {
             //Arrange
             //Subscriber sub1 = new Subscriber("", Subscriber.TriggerType.Sell, 0.3); 
@@ -20,7 +20,7 @@ namespace CoreLibrary.Tests
 
 
         [Fact]
-        public void Subscriber_Negative_Threshold_ShouldReturn_ArgumentException()
+        public void Subscriber_Constructor_Negative_Threshold_ShouldReturn_ArgumentException()
         {
             //Arrange
             //Subscriber sub1 = new Subscriber("", Subscriber.TriggerType.Sell, 0.3); 
